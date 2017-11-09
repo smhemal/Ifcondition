@@ -13,6 +13,7 @@ public class BodyMassIndex {
         String strHt;
         String strWt;
         
+        JOptionPane.showMessageDialog(null, "Welcome to BMI Calculator");
         strHt = JOptionPane.showInputDialog(null," Please Enter Height (m) ");
         strWt = JOptionPane.showInputDialog(null, " Please Enter Weight (Kgs) ");
         
@@ -25,13 +26,16 @@ public class BodyMassIndex {
         
         bmi = wt/(ht*ht);
         
-        String pattern = "###,###.##";
+        String nf = "###.##";
+        //nf=number format
         //Pattern identify the number format   
-        DecimalFormat decimalFormat = new DecimalFormat(pattern);
-        String format = decimalFormat.format(bmi);
+        DecimalFormat df = new DecimalFormat(nf);
+        //df = decimal format
+        String fbmi = df.format(bmi);
         //bmi is conver to number two decimal format
        
-        System.out.println(" My BMI is " + format + " Kg/m2 " );
+        System.out.println(" My BMI is " + fbmi + " Kg/m2 " );
+        JOptionPane.showMessageDialog(null, "My BMI is  " + fbmi);
         //print decimal format
 }
 }
