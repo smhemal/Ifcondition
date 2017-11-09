@@ -3,7 +3,6 @@ package body.mass.index;
 
 import java.text.DecimalFormat;//Import DecimalFormat API is needed  
 import javax.swing.JOptionPane;
-
 /**
  *@author S M H S CHANDRASENA
  */
@@ -37,5 +36,14 @@ public class BodyMassIndex {
         System.out.println(" My BMI is " + fbmi + " Kg/m2 " );
         JOptionPane.showMessageDialog(null, "My BMI is  " + fbmi);
         //print decimal format
+         
+        if (bmi > 25) { 
+            JOptionPane.showMessageDialog(null," You are Obese ","Alert",
+                    JOptionPane.WARNING_MESSAGE);
+                    } else if (bmi < 18) {  
+                        JOptionPane.showMessageDialog(null," You are Under Weight ","Alert",
+                    JOptionPane.WARNING_MESSAGE);} else { 
+                        JOptionPane.showMessageDialog(null," You are at Average weight ","Alert",
+                    JOptionPane.WARNING_MESSAGE);}
 }
 }
